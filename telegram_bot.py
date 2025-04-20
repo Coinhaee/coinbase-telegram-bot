@@ -26,9 +26,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     choice = response_map.get(query.data, "Support")
 
     link = f"https://t.me/{FORWARD_TO_USERNAME.lstrip('@')}"
-    text = f"{choice} registrerad.
-
-➡️ Klicka här för att chatta med support: {link}"
+    text = f"{choice} registrerad.\n\n➡️ Klicka här för att chatta med support: {link}"
     await query.edit_message_text(text=text)
 
 if __name__ == '__main__':
